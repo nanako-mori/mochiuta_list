@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+/* メインページ */
+.main_title_space {
+    padding: 75px 0;
+}
+
+.top_image_space {
+    margin-bottom: 15px;
+}
+
+.top_image {
+    width: 19%;
+    height: auto;
+}
+
+.top_caption_space {
+    margin-bottom: 15px;
+}
+
+.login_area_space {
+    margin-bottom: 75px;
+}
+
+.login_btn_space {
+    margin-right: 8%;
+}
+
+.login_caption_space {
+    margin-bottom: 15px;
+}

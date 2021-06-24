@@ -1,0 +1,102 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    color: #2F2D32;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-weight: normal;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: #AED581;
+    height: 45px;
+}
+
+.copyright {
+    /* テキストを右寄せにし、右マージンを45px空ける */
+    margin-left: auto;
+    margin-right: 45px;
+}
+
+/* 汎用クラス */
+.wrapper {
+    background-color: #FFFDE7;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+}
+
+.btn_big {
+    width: 220px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.radius_6 {
+    border-radius: 6px;
+}
+
+.primary_btn {
+    background-color: #AED581;
+    color: #2F2D32;
+}
+
+.secondary_btn {
+    background-color: #616161;
+    color: #FFFDE7;
+}
+
+.fz18 {
+    font-size: 1.8rem;
+}
+
+.fz24 {
+    font-size: 2.4rem;
+}
+
+.fz36 {
+    font-size: 3.6rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.jc_center {
+    justify-content: center;
+}
+
+.ai_center {
+    align-items: center;
+}
+
+.ai_end {
+    align-items: flex-end;
+}
