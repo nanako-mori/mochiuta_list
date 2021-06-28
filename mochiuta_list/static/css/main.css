@@ -18,7 +18,9 @@
     margin-bottom: 15px;
 }
 
-.login_area_space {
+.login_area {
+    align-items: flex-end;
+    justify-content: center;
     margin-bottom: 75px;
 }
 
@@ -28,4 +30,18 @@
 
 .login_caption_space {
     margin-bottom: 15px;
+}
+
+/* タブレット・スマホ用スタイル */
+@media screen and (max-width: 768px) {
+
+    .login_area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login_btn_space {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
 }
