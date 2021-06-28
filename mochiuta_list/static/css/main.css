@@ -5,6 +5,10 @@
     padding: 75px 0;
 }
 
+.fd_column {
+    flex-direction: column;
+}
+
 .top_image {
     display: block;
     width: 19%;
@@ -37,6 +41,14 @@
 @media screen and (max-width: 768px) {
     .main_title_space {
         padding: 100px 0 50px 0;
+    }
+
+    .trouble_list {
+        order: 2;
+    }
+
+    .top_caption {
+        order: 1;
     }
 
     .top_image {
