@@ -5,13 +5,14 @@
     padding: 75px 0;
 }
 
-.top_image_space {
-    margin-bottom: 15px;
-}
-
 .top_image {
+    display: block;
     width: 19%;
     height: auto;
+}
+
+.top_image_space {
+    margin-bottom: 15px;
 }
 
 .top_caption_space {
@@ -34,6 +35,10 @@
 
 /* タブレット・スマホ用スタイル */
 @media screen and (max-width: 768px) {
+
+    .top_image {
+        display: none;
+    }
 
     .login_area {
         flex-direction: column;
