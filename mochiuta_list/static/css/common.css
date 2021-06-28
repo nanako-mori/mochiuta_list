@@ -15,6 +15,11 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+main {
+    /* フッターを固定 */
+    flex: 1;
+}
+
 h1, h2, h3,
 h4, h5, h6 {
     font-weight: normal;
@@ -42,6 +47,10 @@ footer {
 /* 汎用クラス */
 .wrapper {
     background-color: #FFFDE7;
+    /* フッターを固定 */
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
 }
 
 .center {
