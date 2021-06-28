@@ -15,7 +15,7 @@
     height: auto;
 }
 
-.top_image_space {
+.trouble_list {
     margin-bottom: 15px;
 }
 
@@ -45,6 +45,7 @@
 
     .trouble_list {
         order: 2;
+        margin-bottom: 40px;
     }
 
     .top_caption {
@@ -54,6 +55,10 @@
 
     .top_image {
         display: none;
+    }
+
+    .trouble_list_space {
+        margin-bottom: 10px;
     }
 
     .login_area {
