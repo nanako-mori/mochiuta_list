@@ -58,6 +58,7 @@ footer {
 }
 
 .btn {
+    border-radius: 6px;
     display: block;
     text-align: center;
 }
@@ -66,10 +67,6 @@ footer {
     width: 220px;
     height: 45px;
     line-height: 45px;
-}
-
-.radius_6 {
-    border-radius: 6px;
 }
 
 .primary_btn {
