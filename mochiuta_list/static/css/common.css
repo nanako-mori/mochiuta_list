@@ -129,3 +129,7 @@ footer {
 .border_reset {
     border: none;
 }
+
+.pointer {
+    cursor: pointer;
+}
