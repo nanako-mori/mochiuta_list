@@ -5,10 +5,6 @@
     padding: 75px 0;
 }
 
-.fd_column {
-    flex-direction: column;
-}
-
 .top_image {
     display: block;
     width: 19%;
