@@ -21,6 +21,14 @@
     margin-bottom: 45px;
 }
 
+.reg_list > li {
+    margin-bottom: 22px;
+}
+
+.reg_list > li:nth-last-child(2) {
+    margin-bottom: 45px;
+}
+
 /* タブレット用スタイル */
 @media screen and (max-width: 768px) {
     .reg_par_mb {
