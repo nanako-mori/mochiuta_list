@@ -17,9 +17,20 @@
     margin-bottom: 15px;
 }
 
-/* タブレット・スマホ用スタイル */
+.reg_par_mb_lg {
+    margin-bottom: 45px;
+}
+
+/* タブレット用スタイル */
 @media screen and (max-width: 768px) {
     .reg_par_mb {
         margin-bottom: 5px;
+    }
+}
+
+/* スマホ用スタイル */
+@media screen and (max-width: 414px) {
+    .reg_par_mb_lg {
+        margin-bottom: 16%;
     }
 }
