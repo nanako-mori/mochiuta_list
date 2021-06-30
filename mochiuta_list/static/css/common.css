@@ -147,6 +147,10 @@ footer {
     cursor: pointer;
 }
 
+input {
+    text-indent: 1em;
+}
+
 /* スマホ用スタイル */
 @media screen and (max-width: 414px) {
     .page_title_space {
