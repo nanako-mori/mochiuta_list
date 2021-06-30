@@ -12,3 +12,14 @@
 .reg_list_space {
     margin-bottom: 45px;
 }
+
+.reg_par_mb {
+    margin-bottom: 15px;
+}
+
+/* タブレット・スマホ用スタイル */
+@media screen and (max-width: 768px) {
+    .reg_par_mb {
+        margin-bottom: 5px;
+    }
+}
