@@ -147,9 +147,15 @@ footer {
     cursor: pointer;
 }
 
-input {
+input:not([type="button"]):not([type="submit"]) {
     text-indent: 1em;
 }
+
+input[type="button"],
+input[type="submit"] {
+    -webkit-appearance: none;
+    border-radius: 6px;
+ }
 
 /* スマホ用スタイル */
 @media screen and (max-width: 414px) {
