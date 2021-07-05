@@ -128,6 +128,47 @@ footer {
     margin: 0 auto;
 }
 
+/* メニュー */
+.header {
+    background-color: #AED581;
+    height: 80px;
+}
+
+.title {
+    padding: 0 48px;
+}
+
+.menu {
+    background-color: #616161;
+    /* h1を引いた幅 */
+    width: calc(100% - 312px);
+    height: 100%;
+}
+
+.menu_inner {
+    border-right: 1px solid #FFFFFF;
+    /* align-items: stretchを使うためにdisplay:flexを設定する */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 33%;
+    min-height: 80px;
+}
+
+.menu_inner:last-child {
+    border-right: none;
+}
+
+.menu_item {
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 80px;
+}
+
 /* フォーム部品 */
 .form_border {
     border: 1px solid #2F2D32;
