@@ -11,8 +11,11 @@
 <div class="wrapper">
     <main>
         <div class="header flex ai_center">
-            <h1 class="title fz36">持ち歌リスト</h1>
-            <ul class="flex ai_center menu fz18">
+            <h1 class="title">持ち歌リスト</h1>
+            <div id="menu_btn" class="sp_menu">
+                <img id="menu_img" src="./static/images/menu.svg" alt="menu">
+            </div>
+            <ul id="sp_menu_list" class="flex ai_center menu fz18">
                 <li class="menu_inner">
                     <a class="menu_item" href="mochiuta_list.html">持ち歌一覧</a>
                 </li>
@@ -29,5 +32,29 @@
         <p class="fz18 copyright">&copy; Nanako Mori 2021</p>
     </footer>
 </div>
+<script>
+    var target = document.getElementById('menu_btn');
+
+    target.addEventListener('click', function(){
+        target.classList.toggle('open');
+        classCheck(this);
+    });
+
+    function classCheck(target){
+        var sp_menu_list = document.getElementById('sp_menu_list');
+        var menu_img = document.getElementById('menu_img');
+        
+        if(target.classList.contains('open') == true){
+            sp_menu_list.style.display = 'block';
+            menu_img.src = './static/images/close.svg';
+            if(window.matchMedia('(min-width: 769px)').matches){
+                sp_menu_list.className('menu').style.flexDirection = 'row';
+            }
+        }else{
+            sp_menu_list.style.display = 'none';
+            menu_img.src = './static/images/menu.svg';
+        }
+    }
+</script>
 </body>
 </html>

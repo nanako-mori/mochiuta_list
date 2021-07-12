@@ -135,11 +135,17 @@ footer {
 }
 
 .title {
+    font-size: 3.6rem;
     padding: 0 48px;
+}
+
+.sp_menu {
+    display: none;
 }
 
 .menu {
     background-color: #616161;
+    flex-direction: row;
     /* h1を引いた幅 */
     width: calc(100% - 312px);
     height: 100%;
@@ -198,6 +204,47 @@ input[type="submit"] {
     border-radius: 6px;
  }
 
+/* タブレット用スタイル */
+@media screen and (max-width: 768px) {
+    .header {
+        height: 64px;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .title {
+        font-size: 2.4rem;
+        padding: 0 20px;
+    }
+
+    .sp_menu {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .menu_inner {
+        border-right: none;
+        border-bottom: 1px solid #FFFFFF;
+        width: 100%;
+        min-height: 60px;
+    }
+
+    .menu_item {
+        justify-content: flex-end;
+        padding-right: 20px;
+        min-height: 60px;
+    }
+}
 /* スマホ用スタイル */
 @media screen and (max-width: 414px) {
     .page_title_space {
