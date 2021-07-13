@@ -16,6 +16,7 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+/* HACK:フッターを固定するならそれに相応しいクラス名にする */
 main {
     /* フッターを固定 */
     flex: 1;
