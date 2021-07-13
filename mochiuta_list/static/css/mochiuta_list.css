@@ -30,29 +30,25 @@
     border-bottom: none;
 }
 
-.th, .td {
+.td {
     padding-left: 18px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-.th:first-child,
 .td:first-child {
     width: 40%;
 }
 
-.th:nth-child(2),
 .td:nth-child(2) {
     width: 30%;
 }
 
-.th:nth-child(3),
 .td:nth-child(3) {
     width: 16%;
 }
 
-.th:last-child,
 .td:last-child {
     width: 14%;
     text-align: center;
@@ -94,26 +90,22 @@
         margin-top: 15px;
     }
 
-    .th, .td {
+    .td {
         padding-left: 7px;
     }
 
-    .th:first-child,
     .td:first-child {
         width: 30%;
     }
 
-    .th:nth-child(2),
     .td:nth-child(2) {
         width: 30%;
     }
 
-    .th:nth-child(3),
     .td:nth-child(3) {
         width: 30%;
     }
 
-    .th:last-child,
     .td:last-child {
         width: 10%;
         text-align: left;
