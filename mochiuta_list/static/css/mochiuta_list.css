@@ -11,6 +11,65 @@
     line-height: 45px;
 }
 
+.mochiuta_list {
+    border: 1px solid #616161;
+    font-size: 18px;
+    margin-top: 23px;
+}
+
+.tr {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #2F2D32;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 36px;
+}
+
+.tr:last-child {
+    border-bottom: none;
+}
+
+.th, .td {
+    padding-left: 18px;
+}
+
+.th:first-child,
+.td:first-child {
+    width: 40%;
+}
+
+.th:nth-child(2),
+.td:nth-child(2) {
+    width: 30%;
+}
+
+.th:nth-child(3),
+.td:nth-child(3) {
+    width: 16%;
+}
+
+.th:last-child,
+.td:last-child {
+    width: 14%;
+    text-align: center;
+}
+
+.thead {
+    border-bottom: none;
+    background-color: #AED581;
+}
+
+.tbody {
+    height: 180px;
+    overflow-y: scroll;
+}
+
+.detail_icon {
+    width: 18px;
+    height: auto;
+}
+
 /* タブレット用スタイル */
 @media screen and (max-width: 768px) {
     .mochiuta_wrap {
