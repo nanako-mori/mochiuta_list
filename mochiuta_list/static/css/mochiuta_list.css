@@ -14,7 +14,7 @@
 .mochiuta_list {
     border: 1px solid #616161;
     font-size: 18px;
-    margin-top: 23px;
+    margin: 23px auto;
 }
 
 .tr {
@@ -69,6 +69,15 @@
     height: auto;
 }
 
+.icon_inline {
+    margin: 0 2px;
+    vertical-align: middle;
+}
+
+.note_detail {
+    font-size: 1.6rem;
+}
+
 /* タブレット用スタイル */
 @media screen and (max-width: 768px) {
     .mochiuta_wrap {
@@ -87,7 +96,7 @@
 
     .mochiuta_list {
         font-size: 14px;
-        margin-top: 15px;
+        margin: 15px auto 12px;
     }
 
     .td {
@@ -111,4 +120,13 @@
         text-align: left;
         padding-left: 0;
     }
+
+    .detail_icon {
+        width: 16px;
+    }
+
+    .note_detail {
+        font-size: 1.4rem;
+    }
+
 }
