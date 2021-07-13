@@ -104,6 +104,10 @@ footer {
     justify-content: center;
 }
 
+.jc_s_between {
+    justify-content: space-between;
+}
+
 .ai_center {
     align-items: center;
 }
