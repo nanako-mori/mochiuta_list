@@ -13,7 +13,7 @@
 
 .mochiuta_list {
     border: 1px solid #616161;
-    font-size: 18px;
+    font-size: 1.8rem;
     margin: 23px auto;
 }
 
@@ -95,7 +95,7 @@
     }
 
     .mochiuta_list {
-        font-size: 14px;
+        font-size: 1.4rem;
         margin: 15px auto 12px;
     }
 
