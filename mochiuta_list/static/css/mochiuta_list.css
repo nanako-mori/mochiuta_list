@@ -32,6 +32,9 @@
 
 .th, .td {
     padding-left: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .th:first-child,
@@ -73,7 +76,6 @@
 /* タブレット用スタイル */
 @media screen and (max-width: 768px) {
     .mochiuta_wrap {
-        width: 89%;
         margin: 54px auto;
     }
 
@@ -85,5 +87,36 @@
 
     .hide_text {
         display: none;
+    }
+
+    .mochiuta_list {
+        font-size: 14px;
+        margin-top: 15px;
+    }
+
+    .th, .td {
+        padding-left: 7px;
+    }
+
+    .th:first-child,
+    .td:first-child {
+        width: 30%;
+    }
+
+    .th:nth-child(2),
+    .td:nth-child(2) {
+        width: 30%;
+    }
+
+    .th:nth-child(3),
+    .td:nth-child(3) {
+        width: 30%;
+    }
+
+    .th:last-child,
+    .td:last-child {
+        width: 10%;
+        text-align: left;
+        padding-left: 0;
     }
 }
