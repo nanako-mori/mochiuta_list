@@ -11,23 +11,7 @@
 <body>
 <div class="wrapper">
     <main>
-        <div class="header flex ai_center">
-            <h1 class="title">持ち歌リスト</h1>
-            <div id="menu_btn" class="sp_menu">
-                <img id="menu_img" src="./static/images/menu.svg" alt="menu">
-            </div>
-            <ul id="menu_list" class="flex ai_center menu">
-                <li class="menu_inner">
-                    <a class="menu_item" href="mochiuta_list.html">持ち歌一覧</a>
-                </li>
-                <li class="menu_inner">
-                    <a class="menu_item" href="add.html">新曲追加</a>
-                </li>
-                <li class="menu_inner">
-                    <a class="menu_item" href="logout.html">ログアウト</a>
-                </li>
-            </ul>
-        </div>
+        <?php include(dirname(__FILE__).'/include/header.html'); ?>
         <div class="mochiuta_wrap">
             <div class="flex jc_s_between ai_center">
                 <h2 class="fz18">hogehogeさんの持ち歌リスト</h2>
@@ -129,44 +113,5 @@
         <p class="fz18 copyright">&copy; Nanako Mori 2021</p>
     </footer>
 </div>
-<script>
-    var target = document.getElementById('menu_btn');
-
-    target.addEventListener('click', function(){
-        target.classList.toggle('open');
-        classCheck(this);
-    });
-
-    function classCheck(target){
-        var menu_list = document.getElementById('menu_list');
-        var menu_img = document.getElementById('menu_img');
-        
-        if(target.classList.contains('open') == true){
-            menu_list.style.display = 'block';
-            menu_img.src = './static/images/close.svg';
-
-        }else{
-            menu_list.style.display = 'none';
-            menu_img.src = './static/images/menu.svg';
-        }
-    }
-
-    // ウィンドウ幅が変わった時にメニューのデザイン崩れを防ぐため
-    function resizeWindow(event){
-        pw = window.innerWidth;
-        var menu_list = document.getElementById('menu_list');
-        if(pw > 768){
-            if(menu_list.style.display == "none") {
-                menu_list.style.display = "flex";
-                menu_list.style.flexDirection = 'row';
-            }
-        }else{
-            menu_list.style.display = "none";
-            menu_img.src = './static/images/menu.svg';
-        }
-    }
-
-    window.addEventListener('resize', resizeWindow);
-</script>
 </body>
 </html>
