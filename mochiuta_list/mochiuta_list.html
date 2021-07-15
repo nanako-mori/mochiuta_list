@@ -16,7 +16,7 @@
             <div id="menu_btn" class="sp_menu">
                 <img id="menu_img" src="./static/images/menu.svg" alt="menu">
             </div>
-            <ul id="sp_menu_list" class="flex ai_center menu">
+            <ul id="menu_list" class="flex ai_center menu">
                 <li class="menu_inner">
                     <a class="menu_item" href="mochiuta_list.html">持ち歌一覧</a>
                 </li>
@@ -138,20 +138,35 @@
     });
 
     function classCheck(target){
-        var sp_menu_list = document.getElementById('sp_menu_list');
+        var menu_list = document.getElementById('menu_list');
         var menu_img = document.getElementById('menu_img');
         
         if(target.classList.contains('open') == true){
-            sp_menu_list.style.display = 'block';
+            menu_list.style.display = 'block';
             menu_img.src = './static/images/close.svg';
-            if(window.matchMedia('(min-width: 769px)').matches){
-                sp_menu_list.className('menu').style.flexDirection = 'row';
-            }
+
         }else{
-            sp_menu_list.style.display = 'none';
+            menu_list.style.display = 'none';
             menu_img.src = './static/images/menu.svg';
         }
     }
+
+    // ウィンドウ幅が変わった時にメニューのデザイン崩れを防ぐため
+    function resizeWindow(event){
+        pw = window.innerWidth;
+        var menu_list = document.getElementById('menu_list');
+        if(pw > 768){
+            if(menu_list.style.display == "none") {
+                menu_list.style.display = "flex";
+                menu_list.style.flexDirection = 'row';
+            }
+        }else{
+            menu_list.style.display = "none";
+            menu_img.src = './static/images/menu.svg';
+        }
+    }
+
+    window.addEventListener('resize', resizeWindow);
 </script>
 </body>
 </html>
