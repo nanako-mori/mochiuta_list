@@ -71,6 +71,11 @@ footer {
     line-height: 45px;
 }
 
+.btn_sm {
+    width: 72px;
+    height: 35px;
+}
+
 .primary_btn {
     background-color: #AED581;
     color: #2F2D32;
@@ -135,6 +140,16 @@ footer {
 
 .margin_auto {
     margin: 0 auto;
+}
+
+.pull_right {
+    float: right;
+}
+
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
 }
 
 /* メニュー */
@@ -212,7 +227,11 @@ input[type="button"],
 input[type="submit"] {
     -webkit-appearance: none;
     border-radius: 6px;
- }
+}
+
+textarea {
+    padding: 10px;
+}
 
 /* タブレット用スタイル */
 @media screen and (max-width: 768px) {

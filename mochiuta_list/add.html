@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/common.css">
+    <link rel="stylesheet" href="./static/css/add.css">
+    <title>持ち歌リスト</title>
+</head>
+<body>
+<div class="wrapper">
+    <main>
+        <?php include(dirname(__FILE__).'/include/header.html'); ?>
+        <div class="add_song">
+            <h2 class="add_title">新曲追加</h2>
+            <form class="flex jc_center" action="" method="POST">
+                <ul class="add_list fz18">
+                    <li>
+                        <div class="caption_mb">
+                            <span class="warning">*</span>
+                            <span>曲名</span>
+                        </div>
+                        <input class="form_border form_lg" type="text">
+                    </li>
+                    <li>
+                        <div class="caption_mb">
+                            <span class="warning">*</span>
+                            <span>アーティスト名</span>
+                        </div>
+                        <input class="form_border form_lg" type="text">
+                    </li>
+                    <li>
+                        <div class="caption_mb">
+                            <span class="warning">*</span>
+                            <span>熟練度</span>
+                        </div>
+                        <select class="select_size" name="skill_level">
+                            <option value="1">★☆☆☆☆</option>
+                            <option value="2">★★☆☆☆</option>
+                            <option value="3">★★★☆☆</option>
+                            <option value="4">★★★★☆</option>
+                            <option value="5">★★★★★</option>
+                        </select>
+                    </li>
+                    <li>
+                        <div class="caption_mb">点数</div>
+                        <input class="form_border form_lg" type="text">
+                    </li>
+                    <li>
+                        <div class="caption_mb">メモ</div>
+                        <textarea class="form_border" name="memo"></textarea>
+                    </li>
+                    <li class="clearfix">
+                        <input class="pull_right btn btn_sm border_reset pointer fz18 primary_btn" type="submit" value="送信">
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </main>
+    <?php include(dirname(__FILE__).'/include/footer.html'); ?>
+</div>
+</body>
+</html>
