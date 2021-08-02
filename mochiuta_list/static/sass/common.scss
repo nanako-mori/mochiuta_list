@@ -2,6 +2,7 @@
 @import "reset";
 @import "settings";
 @import "layouts";
+@import "menu";
 @import "form";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
@@ -72,92 +73,6 @@ footer {
     margin: 0;
 }
 
-/* メニュー */
-.header {
-    background-color: $accentColor01;
-    height: 80px;
-}
-
-.title {
-    font-size: $fontXl;
-    padding: 0 48px;
-}
-
-.sp_menu {
-    display: none;
-}
-
-.menu {
-    background-color: $accentColor02;
-    font-size: $fontLg;
-    flex-direction: row;
-    /* h1を引いた幅 */
-    width: calc(100% - 312px);
-    height: 100%;
-}
-
-.menu_inner {
-    border-right: 1px solid $colorWhite;
-    /* align-items: stretchを使うためにdisplay:flexを設定する */
-    @include flexCenter;
-    text-align: center;
-    width: 33%;
-    min-height: 80px;
-}
-
-.menu_inner:last-child {
-    border-right: none;
-}
-
-.menu_item {
-    color: $colorWhite;
-    @include flexCenter;
-    width: 100%;
-    min-height: 80px;
-}
-
-/* タブレット用スタイル */
-@media screen and (max-width: 768px) {
-    .header {
-        height: 64px;
-        justify-content: space-between;
-        position: relative;
-    }
-
-    .title {
-        font-size: $fontLg;
-        padding: 0 20px;
-    }
-
-    .sp_menu {
-        display: block;
-        margin-right: 20px;
-    }
-
-    .menu {
-        display: none;
-        font-size: $fontMd;
-        flex-direction: column;
-        position: absolute;
-        top: 64px;
-        left: 0;
-        width: 100%;
-        height: auto;
-    }
-
-    .menu_inner {
-        border-right: none;
-        border-bottom: 1px solid $colorWhite;
-        width: 100%;
-        min-height: 60px;
-    }
-
-    .menu_item {
-        justify-content: flex-end;
-        padding-right: 20px;
-        min-height: 60px;
-    }
-}
 /* スマホ用スタイル */
 @media screen and (max-width: 414px) {
     .page_title_space {

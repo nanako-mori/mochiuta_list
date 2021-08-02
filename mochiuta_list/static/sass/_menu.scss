@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+$menuHeight: 80px;
+$spMenuHeight: 64px;
+$spMenuInnerHeight: 60px;
+
+.header {
+    background-color: $accentColor01;
+    height: $menuHeight;
+    @media screen and (max-width: 768px) {
+        height: $spMenuHeight;
+        justify-content: space-between;
+        position: relative;
+    }
+}
+
+.title {
+    font-size: $fontXl;
+    padding: 0 48px;
+    @media screen and (max-width: 768px) {
+        font-size: $fontLg;
+        padding: 0 20px;
+    }
+}
+
+.sp_menu {
+    display: none;
+    @media screen and (max-width: 768px) {
+        display: block;
+        margin-right: 20px;
+    }
+}
+
+.menu {
+    background-color: $accentColor02;
+    font-size: $fontLg;
+    flex-direction: row;
+    /* h1を引いた幅 */
+    width: calc(100% - 312px);
+    height: 100%;
+    @media screen and (max-width: 768px) {
+        display: none;
+        font-size: $fontMd;
+        flex-direction: column;
+        position: absolute;
+        top: $spMenuHeight;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.menu_inner {
+    border-right: 1px solid $colorWhite;
+    /* align-items: stretchを使うためにdisplay:flexを設定する */
+    @include flexCenter;
+    text-align: center;
+    width: 33%;
+    min-height: $menuHeight;
+    &:last-child {
+        border-right: none;
+    }
+    @media screen and (max-width: 768px) {
+        border-right: none;
+        border-bottom: 1px solid $colorWhite;
+        width: 100%;
+        min-height: $spMenuInnerHeight;
+    }
+}
+
+.menu_item {
+    color: $colorWhite;
+    @include flexCenter;
+    width: 100%;
+    min-height: $menuHeight;
+    @media screen and (max-width: 768px) {
+        justify-content: flex-end;
+        padding-right: 20px;
+        min-height: $spMenuInnerHeight;
+    }
+}
