@@ -19,6 +19,48 @@ a {
   text-decoration: none;
 }
 
+.flex {
+  display: flex;
+}
+
+.fd_column {
+  flex-direction: column;
+}
+
+.jc_center {
+  justify-content: center;
+}
+
+.jc_s_between {
+  justify-content: space-between;
+}
+
+.jc_end {
+  justify-content: flex-end;
+}
+
+.ai_center {
+  align-items: center;
+}
+
+.ai_end {
+  align-items: flex-end;
+}
+
+.margin_auto {
+  margin: 0 auto;
+}
+
+.pull_right {
+  float: right;
+}
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
 .btn {
   border-radius: 6px;
   display: block;
@@ -134,34 +176,6 @@ footer {
   font-size: 3.6rem;
 }
 
-.flex {
-  display: flex;
-}
-
-.fd_column {
-  flex-direction: column;
-}
-
-.jc_center {
-  justify-content: center;
-}
-
-.jc_s_between {
-  justify-content: space-between;
-}
-
-.jc_end {
-  justify-content: flex-end;
-}
-
-.ai_center {
-  align-items: center;
-}
-
-.ai_end {
-  align-items: flex-end;
-}
-
 .warning {
   color: #FF0000;
 }
@@ -172,20 +186,6 @@ footer {
 
 .sp_space {
   margin: 0;
-}
-
-.margin_auto {
-  margin: 0 auto;
-}
-
-.pull_right {
-  float: right;
-}
-
-.clearfix::after {
-  display: block;
-  content: "";
-  clear: both;
 }
 
 /* メニュー */
