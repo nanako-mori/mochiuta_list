@@ -1,6 +1,21 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
+$baseColor: #FFFDE7;
+$mainColor: #2F2D32;
+$accentColor01: #AED581;
+$accentColor02: #616161;
+$colorWhite: #FFFFFF;
+$fontSm: 1.6rem;
+$fontMd: 1.8rem;
+$fontLg: 2.4rem;
+$fontXl: 3.6rem;
+
+
+@mixin radius($val: 6px) {
+    border-radius: $val;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +27,7 @@ html {
 }
 
 body {
-    color: #2F2D32;
+    color: $mainColor;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -36,7 +51,7 @@ a {
 }
 
 footer {
-    background-color: #AED581;
+    background-color: $accentColor01;
     height: 45px;
 }
 
@@ -48,7 +63,7 @@ footer {
 
 /* 汎用クラス */
 .wrapper {
-    background-color: #FFFDE7;
+    background-color: $baseColor;
     /* フッターを固定 */
     display: flex;
     flex-flow: column;
@@ -60,51 +75,63 @@ footer {
 }
 
 .btn {
-    border-radius: 6px;
+    @include radius();
     display: block;
     text-align: center;
 }
 
+@mixin btnSize($width: 220px, $height: 45px){
+    width: $width;
+    height: $height;
+    line-height: $height;
+}
+
 .btn_big {
-    width: 220px;
-    height: 45px;
-    line-height: 45px;
+    @include btnSize();
 }
 
 .btn_sm {
-    width: 72px;
-    height: 35px;
-    line-height: 35px;
+    @include btnSize(72px, 35px);
 }
 
 .primary_btn {
-    background-color: #AED581;
-    color: #2F2D32;
+    background-color: $accentColor01;
+    color: $mainColor;
 }
 
 .secondary_btn {
-    background-color: #616161;
-    color: #FFFDE7;
+    background-color: $accentColor02;
+    color: $baseColor;
 }
 
 .fz16 {
-    font-size: 1.6rem;
+    font-size: $fontSm;
 }
 
 .fz18 {
-    font-size: 1.8rem;
+    font-size: $fontMd;
 }
 
 .fz24 {
-    font-size: 2.4rem;
+    font-size: $fontLg;
 }
 
 .fz36 {
-    font-size: 3.6rem;
+    font-size: $fontXl;
+}
+
+@mixin flex {
+    display: flex;
+}
+
+@mixin flexCenter {
+    @include flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .flex {
-    display: flex;
+    @include flex;
 }
 
 .fd_column {
@@ -159,12 +186,12 @@ footer {
 
 /* メニュー */
 .header {
-    background-color: #AED581;
+    background-color: $accentColor01;
     height: 80px;
 }
 
 .title {
-    font-size: 3.6rem;
+    font-size: $fontXl;
     padding: 0 48px;
 }
 
@@ -173,8 +200,8 @@ footer {
 }
 
 .menu {
-    background-color: #616161;
-    font-size: 2.4rem;
+    background-color: $accentColor02;
+    font-size: $fontLg;
     flex-direction: row;
     /* h1を引いた幅 */
     width: calc(100% - 312px);
@@ -182,11 +209,9 @@ footer {
 }
 
 .menu_inner {
-    border-right: 1px solid #FFFFFF;
+    border-right: 1px solid $colorWhite;
     /* align-items: stretchを使うためにdisplay:flexを設定する */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter;
     text-align: center;
     width: 33%;
     min-height: 80px;
@@ -197,18 +222,16 @@ footer {
 }
 
 .menu_item {
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: $colorWhite;
+    @include flexCenter;
     width: 100%;
     min-height: 80px;
 }
 
 /* フォーム部品 */
 .form_border {
-    border: 1px solid #2F2D32;
-    border-radius: 6px;
+    border: 1px solid $mainColor;
+    @include radius();
 }
 
 .form_size {
@@ -231,7 +254,7 @@ input:not([type="button"]):not([type="submit"]) {
 input[type="button"],
 input[type="submit"] {
     -webkit-appearance: none;
-    border-radius: 6px;
+    @include radius();
 }
 
 textarea {
@@ -247,7 +270,7 @@ textarea {
     }
 
     .title {
-        font-size: 2.4rem;
+        font-size: $fontLg;
         padding: 0 20px;
     }
 
@@ -258,7 +281,7 @@ textarea {
 
     .menu {
         display: none;
-        font-size: 1.8rem;
+        font-size: $fontMd;
         flex-direction: column;
         position: absolute;
         top: 64px;
@@ -269,7 +292,7 @@ textarea {
 
     .menu_inner {
         border-right: none;
-        border-bottom: 1px solid #FFFFFF;
+        border-bottom: 1px solid $colorWhite;
         width: 100%;
         min-height: 60px;
     }
