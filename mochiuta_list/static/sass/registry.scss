@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+/* 登録に関する画面のスタイル */
+.reg_caption_space {
+    margin-bottom: 10px;
+}
+
+.reg_par_mb {
+    margin-bottom: 15px;
+}
+
+.reg_par_mb_lg {
+    margin-bottom: 45px;
+}
+
+.temp_reg_list > li {
+    margin-bottom: 30px;
+}
+
+.reg_list > li {
+    margin-bottom: 22px;
+}
+
+.temp_reg_list > li:nth-last-child(2),
+.reg_list > li:nth-last-child(2) {
+    margin-bottom: 45px;
+}
+
+.temp_reg_list > li:last-child,
+.reg_list > li:last-child {
+    margin-bottom: 0;
+}
+
+/* タブレット用スタイル */
+@media screen and (max-width: 768px) {
+    .reg_par_mb {
+        margin-bottom: 5px;
+    }
+}
+
+/* スマホ用スタイル */
+@media screen and (max-width: 414px) {
+    .reg_par_mb_lg {
+        margin-bottom: 16%;
+    }
+}
