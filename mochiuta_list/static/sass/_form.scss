@@ -1,0 +1,65 @@
+@charset "utf-8";
+@import "settings";
+
+.btn {
+    @include radius();
+    display: block;
+    text-align: center;
+}
+
+@mixin btnSize($width: 220px, $height: 45px){
+    width: $width;
+    height: $height;
+    line-height: $height;
+}
+
+// rename
+.btn_big {
+    @include btnSize();
+}
+
+.btn_sm {
+    @include btnSize(72px, 35px);
+}
+
+input:not([type="button"]):not([type="submit"]) {
+    text-indent: 1em;
+}
+
+input[type="button"],
+input[type="submit"] {
+    -webkit-appearance: none;
+    @include radius();
+}
+
+.primary_btn {
+    background-color: $accentColor01;
+    color: $mainColor;
+}
+
+.secondary_btn {
+    background-color: $accentColor02;
+    color: $baseColor;
+}
+
+.form_border {
+    border: 1px solid $mainColor;
+    @include radius();
+}
+
+.form_size {
+    width: 220px;
+    height: 30px;
+}
+
+.border_reset {
+    border: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+textarea {
+    padding: 10px;
+}

@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+$baseColor: #FFFDE7;
+$mainColor: #2F2D32;
+$accentColor01: #AED581;
+$accentColor02: #616161;
+$colorWhite: #FFFFFF;
+$fontSm: 1.6rem;
+$fontMd: 1.8rem;
+$fontLg: 2.4rem;
+$fontXl: 3.6rem;
+
+@mixin radius($val: 6px) {
+    border-radius: $val;
+}
+
+@mixin flex {
+    display: flex;
+}
