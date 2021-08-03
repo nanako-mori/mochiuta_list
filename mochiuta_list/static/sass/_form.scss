@@ -7,12 +7,6 @@
     text-align: center;
 }
 
-@mixin btnSize($width: 220px, $height: 45px){
-    width: $width;
-    height: $height;
-    line-height: $height;
-}
-
 // rename
 .btn_big {
     @include btnSize();
