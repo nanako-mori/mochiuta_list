@@ -1,14 +1,10 @@
-@charset "UTF-8";
-/* ログイン画面のスタイル */
-.login_list > li {
+.login_list li {
   margin-bottom: 30px;
 }
-
-.login_list > li:nth-last-child(2) {
+.login_list li:nth-last-child(2) {
   margin-bottom: 45px;
 }
-
-.login_list > li:last-child {
+.login_list li:last-child {
   margin-bottom: 0;
 }
 

@@ -1,16 +1,16 @@
 @charset "utf-8";
+@import "settings";
 
-/* ログイン画面のスタイル */
-.login_list > li {
-    margin-bottom: 30px;
-}
-
-.login_list > li:nth-last-child(2) {
-    margin-bottom: 45px;
-}
-
-.login_list > li:last-child {
-    margin-bottom: 0;
+.login_list {
+    li {
+        margin-bottom: 30px;
+        &:nth-last-child(2) {
+            margin-bottom: 45px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .login_caption_space {
