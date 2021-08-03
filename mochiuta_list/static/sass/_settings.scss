@@ -17,3 +17,15 @@ $fontXl: 3.6rem;
 @mixin flex {
     display: flex;
 }
+
+@mixin mediaMd($widthMediaMd: 768px) {
+    @media screen and (max-width: $widthMediaMd) {
+        @content;
+    }
+}
+
+@mixin mediaSm($widthMediaSm: 414px){
+    @media screen and (max-width: $widthMediaSm) {
+        @content;
+    }
+}
