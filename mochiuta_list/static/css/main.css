@@ -1,7 +1,10 @@
-@charset "UTF-8";
-/* メインページ */
 .main_title_space {
   padding: 75px 0;
+}
+@media screen and (max-width: 768px) {
+  .main_title_space {
+    padding: 100px 0 50px 0;
+  }
 }
 
 .top_image {
@@ -9,13 +12,36 @@
   width: 19%;
   height: auto;
 }
+@media screen and (max-width: 768px) {
+  .top_image {
+    display: none;
+  }
+}
 
 .trouble_list {
   margin-bottom: 15px;
 }
+@media screen and (max-width: 768px) {
+  .trouble_list {
+    order: 2;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .trouble_list_space {
+    margin-bottom: 10px;
+  }
+}
 
 .top_caption {
   margin-bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+  .top_caption {
+    order: 1;
+    margin-bottom: 30px;
+  }
 }
 
 .login_area {
@@ -23,46 +49,23 @@
   justify-content: center;
   margin-bottom: 75px;
 }
-
-.login_btn_space {
-  margin-right: 8%;
-}
-
-.login_caption_space {
-  margin-bottom: 15px;
-}
-
-/* タブレット・スマホ用スタイル */
 @media screen and (max-width: 768px) {
-  .main_title_space {
-    padding: 100px 0 50px 0;
-  }
-
-  .trouble_list {
-    order: 2;
-    margin-bottom: 40px;
-  }
-
-  .top_caption {
-    order: 1;
-    margin-bottom: 30px;
-  }
-
-  .top_image {
-    display: none;
-  }
-
-  .trouble_list_space {
-    margin-bottom: 10px;
-  }
-
   .login_area {
     flex-direction: column;
     align-items: center;
   }
+}
 
+.login_btn_space {
+  margin-right: 8%;
+}
+@media screen and (max-width: 768px) {
   .login_btn_space {
     margin-right: 0;
     margin-bottom: 40px;
   }
+}
+
+.login_caption_space {
+  margin-bottom: 15px;
 }
