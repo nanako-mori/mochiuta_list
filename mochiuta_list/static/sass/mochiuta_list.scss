@@ -49,22 +49,30 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    @for $i from 1 through 4 {
+    $widthList: 40%, 30%, 16%, 14%;
+    $i: 1;
+    @each $width in $widthList {
         &:nth-child(#{$i}) {
-            $widths: (40%, 30%, 16%, 14%);
-            width: #{nth($widths, $i)};
+            width: #{$width};
             @if $i == 4 {
                 text-align: center;
             }
-            @include mediaMd {
+        }
+        $i: $i + 1;
+    }
+    @include mediaMd {
+        $widthList: 30%, 30%, 30%, 10%;
+        $i: 1;
+        @each $width in $widthList {
+            &:nth-child(#{$i}) {
                 padding-left: 7px;
-                $widths: (30%, 30%, 30%, 10%);
-                width: #{nth($widths, $i)};
+                width: #{$width};
                 @if $i == 4 {
                     text-align: left;
                     padding-left: 0;
                 }
             }
+            $i: $i + 1;
         }
     }
 }

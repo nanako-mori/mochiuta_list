@@ -60,35 +60,29 @@
 .td:nth-child(1) {
   width: 40%;
 }
-@media screen and (max-width: 768px) {
-  .td:nth-child(1) {
-    padding-left: 7px;
-    width: 30%;
-  }
-}
 .td:nth-child(2) {
   width: 30%;
 }
-@media screen and (max-width: 768px) {
-  .td:nth-child(2) {
-    padding-left: 7px;
-    width: 30%;
-  }
-}
 .td:nth-child(3) {
   width: 16%;
-}
-@media screen and (max-width: 768px) {
-  .td:nth-child(3) {
-    padding-left: 7px;
-    width: 30%;
-  }
 }
 .td:nth-child(4) {
   width: 14%;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
+  .td:nth-child(1) {
+    padding-left: 7px;
+    width: 30%;
+  }
+  .td:nth-child(2) {
+    padding-left: 7px;
+    width: 30%;
+  }
+  .td:nth-child(3) {
+    padding-left: 7px;
+    width: 30%;
+  }
   .td:nth-child(4) {
     padding-left: 7px;
     width: 10%;
