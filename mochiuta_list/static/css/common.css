@@ -57,8 +57,8 @@ a {
 
 .clearfix::after {
   display: block;
-  content: "";
   clear: both;
+  content: "";
 }
 
 .header {

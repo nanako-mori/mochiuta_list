@@ -1,0 +1,12 @@
+{
+    "extends": [
+        "stylelint-config-recommended-scss",
+        "stylelint-config-recess-order",
+        "stylelint-config-prettier"
+    ],
+    "rules": {
+        "indentation": 4,
+        "declaration-colon-space-before": "never",
+        "declaration-colon-space-after": "always"
+    }
+}

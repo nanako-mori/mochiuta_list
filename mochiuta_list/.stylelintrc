@@ -1,9 +1,0 @@
-{
-    "extends": "stylelint-config-standard",
-    "rules": {
-        "indentation": 4,
-        "declaration-block-trailing-semicolon": "never",
-        "declaration-colon-space-before": "never",
-        "declaration-colon-space-after": "always",
-    }
-}
