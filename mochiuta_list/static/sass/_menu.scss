@@ -5,21 +5,21 @@ $spMenuHeight: 64px;
 $spMenuInnerHeight: 60px;
 
 .header {
-    background-color: $accentColor01;
     height: $menuHeight;
+    background-color: $accentColor01;
     @include mediaMd {
-        height: $spMenuHeight;
-        justify-content: space-between;
         position: relative;
+        justify-content: space-between;
+        height: $spMenuHeight;
     }
 }
 
 .title {
-    font-size: $fontXl;
     padding: 0 48px;
+    font-size: $fontXl;
     @include mediaMd {
-        font-size: $fontLg;
         padding: 0 20px;
+        font-size: $fontLg;
     }
 }
 
@@ -32,50 +32,51 @@ $spMenuInnerHeight: 60px;
 }
 
 .menu {
-    background-color: $accentColor02;
-    font-size: $fontLg;
     flex-direction: row;
     /* h1を引いた幅 */
     width: calc(100% - 312px);
     height: 100%;
+    font-size: $fontLg;
+    background-color: $accentColor02;
     @include mediaMd {
-        display: none;
-        font-size: $fontMd;
-        flex-direction: column;
         position: absolute;
         top: $spMenuHeight;
         left: 0;
+        display: none;
+        flex-direction: column;
         width: 100%;
         height: auto;
+        font-size: $fontMd;
     }
 }
 
 .menu_inner {
+    width: 33%;
+    min-height: $menuHeight;
+    text-align: center;
     border-right: 1px solid $colorWhite;
     /* align-items: stretchを使うためにdisplay:flexを設定する */
     @include flexCenter;
-    text-align: center;
-    width: 33%;
-    min-height: $menuHeight;
     &:last-child {
         border-right: none;
     }
     @include mediaMd {
-        border-right: none;
-        border-bottom: 1px solid $colorWhite;
         width: 100%;
         min-height: $spMenuInnerHeight;
+        border-right: none;
+        border-bottom: 1px solid $colorWhite;
     }
 }
 
 .menu_item {
-    color: $colorWhite;
-    @include flexCenter;
     width: 100%;
     min-height: $menuHeight;
+    color: $colorWhite;
+    @include flexCenter;
+    @include bgLighten($accentColor02);
     @include mediaMd {
         justify-content: flex-end;
-        padding-right: 20px;
         min-height: $spMenuInnerHeight;
+        padding-right: 20px;
     }
 }

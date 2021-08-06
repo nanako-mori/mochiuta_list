@@ -1,10 +1,10 @@
 @charset "utf-8";
 
-$baseColor: #FFFDE7;
-$mainColor: #2F2D32;
-$accentColor01: #AED581;
+$baseColor: #fffde7;
+$mainColor: #2f2d32;
+$accentColor01: #aed581;
 $accentColor02: #616161;
-$colorWhite: #FFFFFF;
+$colorWhite: #ffffff;
 $fontXs: 1.4rem;
 $fontSm: 1.6rem;
 $fontMd: 1.8rem;
@@ -15,10 +15,22 @@ $fontXl: 3.6rem;
     border-radius: $val;
 }
 
-@mixin btnSize($width: 220px, $height: 45px){
+@mixin btnSize($width: 220px, $height: 45px) {
     width: $width;
     height: $height;
     line-height: $height;
+}
+
+@mixin bgDarken($color) {
+    &:hover {
+        background-color: darken($color, 10%);
+    }
+}
+
+@mixin bgLighten($color) {
+    &:hover {
+        background-color: lighten($color, 10%);
+    }
 }
 
 @mixin flex {
@@ -31,7 +43,7 @@ $fontXl: 3.6rem;
     }
 }
 
-@mixin mediaSm($widthMediaSm: 414px){
+@mixin mediaSm($widthMediaSm: 414px) {
     @media screen and (max-width: $widthMediaSm) {
         @content;
     }

@@ -62,25 +62,25 @@ a {
 }
 
 .header {
-  background-color: #AED581;
   height: 80px;
+  background-color: #aed581;
 }
 @media screen and (max-width: 768px) {
   .header {
-    height: 64px;
-    justify-content: space-between;
     position: relative;
+    justify-content: space-between;
+    height: 64px;
   }
 }
 
 .title {
-  font-size: 3.6rem;
   padding: 0 48px;
+  font-size: 3.6rem;
 }
 @media screen and (max-width: 768px) {
   .title {
-    font-size: 2.4rem;
     padding: 0 20px;
+    font-size: 2.4rem;
   }
 }
 
@@ -95,61 +95,64 @@ a {
 }
 
 .menu {
-  background-color: #616161;
-  font-size: 2.4rem;
   flex-direction: row;
   /* h1を引いた幅 */
   width: calc(100% - 312px);
   height: 100%;
+  font-size: 2.4rem;
+  background-color: #616161;
 }
 @media screen and (max-width: 768px) {
   .menu {
-    display: none;
-    font-size: 1.8rem;
-    flex-direction: column;
     position: absolute;
     top: 64px;
     left: 0;
+    display: none;
+    flex-direction: column;
     width: 100%;
     height: auto;
+    font-size: 1.8rem;
   }
 }
 
 .menu_inner {
-  border-right: 1px solid #FFFFFF;
+  width: 33%;
+  min-height: 80px;
+  text-align: center;
+  border-right: 1px solid #ffffff;
   /* align-items: stretchを使うためにdisplay:flexを設定する */
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  width: 33%;
-  min-height: 80px;
 }
 .menu_inner:last-child {
   border-right: none;
 }
 @media screen and (max-width: 768px) {
   .menu_inner {
-    border-right: none;
-    border-bottom: 1px solid #FFFFFF;
     width: 100%;
     min-height: 60px;
+    border-right: none;
+    border-bottom: 1px solid #ffffff;
   }
 }
 
 .menu_item {
-  color: #FFFFFF;
+  width: 100%;
+  min-height: 80px;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  min-height: 80px;
+}
+.menu_item:hover {
+  background-color: #7b7b7b;
 }
 @media screen and (max-width: 768px) {
   .menu_item {
     justify-content: flex-end;
-    padding-right: 20px;
     min-height: 60px;
+    padding-right: 20px;
   }
 }
 
@@ -182,17 +185,23 @@ input[type=submit] {
 }
 
 .primary_btn {
-  background-color: #AED581;
-  color: #2F2D32;
+  color: #2f2d32;
+  background-color: #aed581;
+}
+.primary_btn:hover {
+  background-color: #95c85b;
 }
 
 .secondary_btn {
+  color: #fffde7;
   background-color: #616161;
-  color: #FFFDE7;
+}
+.secondary_btn:hover {
+  background-color: #7b7b7b;
 }
 
 .form_border {
-  border: 1px solid #2F2D32;
+  border: 1px solid #2f2d32;
   border-radius: 6px;
 }
 
@@ -218,7 +227,7 @@ html {
 }
 
 body {
-  color: #2F2D32;
+  color: #2f2d32;
   font-family: "Noto Sans JP", sans-serif;
 }
 
@@ -229,7 +238,7 @@ main {
 }
 
 footer {
-  background-color: #AED581;
+  background-color: #aed581;
   height: 45px;
 }
 
@@ -241,7 +250,7 @@ footer {
 
 /* 汎用クラス */
 .wrapper {
-  background-color: #FFFDE7;
+  background-color: #fffde7;
   /* フッターを固定 */
   display: flex;
   flex-flow: column;

@@ -27,13 +27,15 @@ input[type="submit"] {
 }
 
 .primary_btn {
-    background-color: $accentColor01;
     color: $mainColor;
+    background-color: $accentColor01;
+    @include bgDarken($accentColor01);
 }
 
 .secondary_btn {
-    background-color: $accentColor02;
     color: $baseColor;
+    background-color: $accentColor02;
+    @include bgLighten($accentColor02);
 }
 
 .form_border {
