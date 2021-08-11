@@ -1,25 +1,44 @@
 @charset "utf-8";
+@import "foundation/**";
+@import "modules/**";
 
 .add_song {
     margin: 30px auto;
+    @include mediaMd {
+        width: 90%;
+        margin: 14px 20px;
+    }
 }
 
 .add_title {
     margin-bottom: 25px;
-    font-size: 3.6rem;
+    font-size: $fontXl;
     text-align: center;
+    @include mediaMd {
+        font-size: $fontMd;
+        text-align: left;
+    }
 }
 
-.add_list > li {
-    margin-bottom: 10px;
-}
-
-.add_list > li:nth-last-child(2) {
-    margin-bottom: 15px;
-}
-
-.add_list > li:last-child {
-    margin-bottom: 0;
+.add_list {
+    li {
+        margin-bottom: 10px;
+        @include mediaMd {
+            margin-bottom: 14px;
+        }
+        &:nth-last-child(2) {
+            margin-bottom: 15px;
+            @include mediaMd {
+                margin-bottom: 20px;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @include mediaMd {
+        width: 100%;
+    }
 }
 
 .caption_mb {
@@ -29,53 +48,25 @@
 .form_lg {
     width: 300px;
     height: 30px;
+    @include mediaMd {
+        width: 100%;
+        height: 40px;
+    }
 }
 
 .select_size {
     width: 107px;
     height: 30px;
+    @include mediaMd {
+        width: 142px;
+        height: 40px;
+    }
 }
 
 textarea {
     width: 300px;
     height: 127px;
-}
-
-/* タブレット用スタイル */
-@media screen and (max-width: 768px) {
-    .add_song {
-        width: 90%;
-        margin: 14px 20px;
-    }
-
-    .add_title {
-        font-size: 1.8rem;
-        text-align: left;
-    }
-
-    .add_list {
-        width: 100%;
-    }
-
-    .add_list > li {
-        margin-bottom: 14px;
-    }
-
-    .add_list > li:nth-last-child(2) {
-        margin-bottom: 20px;
-    }
-
-    .form_lg {
-        width: 100%;
-        height: 40px;
-    }
-
-    .select_size {
-        width: 142px;
-        height: 40px;
-    }
-
-    textarea {
+    @include mediaMd {
         width: 100%;
         height: 170px;
     }
