@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "settings";
+@import "../foundation/_settings";
 
 .btn {
     @include radius();

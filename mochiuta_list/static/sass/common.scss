@@ -1,18 +1,15 @@
 @charset "utf-8";
-@import "reset";
-@import "settings";
-@import "layouts";
-@import "menu";
-@import "form";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import "foundation/**";
+@import "modules/**";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 
 html {
     font-size: 10px;
 }
 
 body {
+    font-family: "Noto Sans JP", sans-serif;
     color: $mainColor;
-    font-family: 'Noto Sans JP', sans-serif;
 }
 
 /* HACK:フッターを固定するならそれに相応しいクラス名にする */
@@ -22,23 +19,23 @@ main {
 }
 
 footer {
-    background-color: $accentColor01;
     height: 45px;
+    background-color: $accentColor01;
 }
 
 .copyright {
+    margin-right: 45px;
     /* テキストを右寄せにし、右マージンを45px空ける */
     margin-left: auto;
-    margin-right: 45px;
 }
 
 /* 汎用クラス */
 .wrapper {
+    flex-flow: column;
+    min-height: 100vh;
     background-color: $baseColor;
     /* フッターを固定 */
     @include flex;
-    flex-flow: column;
-    min-height: 100vh;
 }
 
 .center {
@@ -62,7 +59,7 @@ footer {
 }
 
 .warning {
-    color: #FF0000;
+    color: #ff0000;
 }
 
 .page_title_space {

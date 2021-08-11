@@ -4,9 +4,9 @@
 }
 
 .add_title {
+  margin-bottom: 25px;
   font-size: 3.6rem;
   text-align: center;
-  margin-bottom: 25px;
 }
 
 .add_list > li {
@@ -43,8 +43,8 @@ textarea {
 /* タブレット用スタイル */
 @media screen and (max-width: 768px) {
   .add_song {
-    margin: 14px 20px;
     width: 90%;
+    margin: 14px 20px;
   }
 
   .add_title {

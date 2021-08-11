@@ -1,5 +1,6 @@
 @charset "utf-8";
-@import "settings";
+@import "foundation/**";
+@import "modules/**";
 
 .mochiuta_wrap {
     width: 90%;
@@ -23,22 +24,22 @@
 }
 
 .mochiuta_list {
-    border: 1px solid $accentColor02;
-    font-size: $fontMd;
     margin: 23px auto;
+    font-size: $fontMd;
+    border: 1px solid $accentColor02;
     @include mediaMd {
-        font-size: $fontXs;
         margin: 15px auto 12px;
+        font-size: $fontXs;
     }
 }
 
 .tr {
-    background-color: $colorWhite;
-    border-bottom: 1px solid $mainColor;
-    @include flex;
     align-items: center;
     width: 100%;
     height: 36px;
+    background-color: $colorWhite;
+    border-bottom: 1px solid $mainColor;
+    @include flex;
     &:last-child {
         border-bottom: none;
     }
@@ -47,8 +48,8 @@
 .td {
     padding-left: 18px;
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
+    white-space: nowrap;
     $widthList: 40%, 30%, 16%, 14%;
     $i: 1;
     @each $width in $widthList {
@@ -65,8 +66,8 @@
         $i: 1;
         @each $width in $widthList {
             &:nth-child(#{$i}) {
-                padding-left: 7px;
                 width: #{$width};
+                padding-left: 7px;
                 @if $i == 4 {
                     text-align: left;
                     padding-left: 0;
@@ -78,8 +79,8 @@
 }
 
 .thead {
-    border-bottom: none;
     background-color: $accentColor01;
+    border-bottom: none;
 }
 
 .tbody {

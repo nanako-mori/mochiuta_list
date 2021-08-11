@@ -1,5 +1,6 @@
 @charset "utf-8";
-@import "settings";
+@import "foundation/**";
+@import "modules/**";
 
 //登録に関する画面のスタイル
 .reg_caption_space {
