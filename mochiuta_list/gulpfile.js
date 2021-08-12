@@ -6,6 +6,7 @@ var plumber = require("gulp-plumber");
 var notify = require("gulp-notify");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+var mqpacker = require("css-mqpacker");
 
 gulp.task("sass", function () {
     return gulp
@@ -18,6 +19,7 @@ gulp.task("sass", function () {
             })
         )
         .pipe(sass({ outputStyle: "expanded" }))
+        .pipe(postcss[mqpacker()])
         .pipe(postcss([autoprefixer]))
         .pipe(sourcemaps.write("./map"))
         .pipe(gulp.dest("./static/css"));
