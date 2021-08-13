@@ -5,6 +5,7 @@ var sourcemaps = require("gulp-sourcemaps");
 var plumber = require("gulp-plumber");
 var notify = require("gulp-notify");
 var autoprefixer = require("gulp-autoprefixer");
+var gcmq = require("gulp-group-css-media-queries");
 
 gulp.task("sass", function () {
     return gulp
@@ -18,6 +19,7 @@ gulp.task("sass", function () {
         )
         .pipe(sass({ outputStyle: "expanded" }))
         .pipe(autoprefixer())
+        .pipe(gcmq())
         .pipe(sourcemaps.write("./map"))
         .pipe(gulp.dest("./static/css"));
 });

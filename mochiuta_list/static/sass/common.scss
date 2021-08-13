@@ -64,19 +64,14 @@ footer {
 
 .page_title_space {
     margin: 75px 0 53px 0;
+    @include mediaSm {
+        margin: 26% 0 11% 0;
+    }
 }
 
 .sp_space {
     margin: 0;
-}
-
-/* スマホ用スタイル */
-@media screen and (max-width: 414px) {
-    .page_title_space {
-        margin: 26% 0 11% 0;
-    }
-
-    .sp_space {
+    @include mediaSm {
         margin: 0 10%;
     }
 }
