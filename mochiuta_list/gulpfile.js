@@ -4,7 +4,7 @@ var sassGlob = require("gulp-sass-glob");
 var sourcemaps = require("gulp-sourcemaps");
 var plumber = require("gulp-plumber");
 var notify = require("gulp-notify");
-var pleeease = require("gulp-pleeease");
+var autoprefixer = require("gulp-autoprefixer");
 
 gulp.task("sass", function () {
     return gulp
@@ -17,14 +17,7 @@ gulp.task("sass", function () {
             })
         )
         .pipe(sass({ outputStyle: "expanded" }))
-        .pipe(
-            pleeease({
-                sass: true,
-                autoprefixer: true,
-                minifier: false,
-                mqpacker: true,
-            })
-        )
+        .pipe(autoprefixer())
         .pipe(sourcemaps.write("./map"))
         .pipe(gulp.dest("./static/css"));
 });
