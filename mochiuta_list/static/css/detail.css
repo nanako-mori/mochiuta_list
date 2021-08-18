@@ -1,282 +1,57 @@
-@charset "UTF-8";
-
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: normal;
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-.btn {
-    display: block;
-    text-align: center;
-    border-radius: 6px;
-}
-
-.btn_big {
-    width: 220px;
-    height: 45px;
-    line-height: 45px;
-}
-
-.btn_sm {
-    width: 72px;
-    height: 35px;
-    line-height: 35px;
-}
-
-input:not([type="button"]):not([type="submit"]) {
-    text-indent: 1em;
-}
-
-input[type="button"],
-input[type="submit"] {
-    -webkit-appearance: none;
-    border-radius: 6px;
-}
-
-.primary_btn {
-    color: #2f2d32;
-    background-color: #aed581;
-}
-
-.primary_btn:hover {
-    background-color: #95c85b;
-}
-
-.secondary_btn {
-    color: #fffde7;
-    background-color: #616161;
-}
-
-.secondary_btn:hover {
-    background-color: #7b7b7b;
-}
-
-.form_border {
-    border: 1px solid #2f2d32;
-    border-radius: 6px;
-}
-
-.form_size {
-    width: 220px;
-    height: 30px;
-}
-
-.border_reset {
-    border: none;
-}
-
-.pointer {
-    cursor: pointer;
-}
-
-textarea {
-    padding: 10px;
-}
-
-.flex {
-    display: flex;
-}
-
-.fd_column {
-    flex-direction: column;
-}
-
-.jc_center {
-    justify-content: center;
-}
-
-.jc_s_between {
-    justify-content: space-between;
-}
-
-.jc_end {
-    justify-content: flex-end;
-}
-
-.ai_center {
-    align-items: center;
-}
-
-.ai_end {
-    align-items: flex-end;
-}
-
-.margin_auto {
-    margin: 0 auto;
-}
-
-.pull_right {
-    float: right;
-}
-
-.clearfix::after {
-    display: block;
-    clear: both;
-    content: "";
-}
-
-.header {
-    height: 80px;
-    background-color: #aed581;
-}
-
-.title {
-    padding: 0 48px;
-    font-size: 3.6rem;
-}
-
-.sp_menu {
-    display: none;
-}
-
-.menu {
-    flex-direction: row;
-    /* h1を引いた幅 */
-    width: calc(100% - 312px);
-    height: 100%;
-    font-size: 2.4rem;
-    background-color: #616161;
-}
-
-.menu_inner {
-    /* align-items: stretchを使うためにdisplay:flexを設定する */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 33%;
-    min-height: 80px;
-    text-align: center;
-    border-right: 1px solid #ffffff;
-}
-
-.menu_inner:last-child {
-    border-right: none;
-}
-
-.menu_item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 80px;
-    color: #ffffff;
-}
-
-.menu_item:hover {
-    background-color: #7b7b7b;
-}
-
 .detail {
-    margin: 53px 48px;
+  margin: 53px 48px;
 }
 
 .detail_table {
-    margin: 30px auto;
-    background-color: #ffffff;
-    border: 1px solid #616161;
+  margin: 30px auto;
+  background-color: #ffffff;
+  border: 1px solid #616161;
 }
 
 .tr {
-    display: flex;
-    min-height: 34px;
-    padding: 8px 0;
-    border-bottom: 1px solid #616161;
+  display: flex;
+  min-height: 34px;
+  padding: 8px 0;
+  border-bottom: 1px solid #616161;
 }
 
 .tr:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .th {
-    width: 27%;
-    padding-left: 13px;
+  width: 27%;
+  padding-left: 13px;
 }
 
 .td {
-    width: 73%;
-    padding-right: 13px;
+  width: 73%;
+  padding-right: 13px;
 }
 
 .del_btn_mr {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 @media screen and (max-width: 768px) {
-    .header {
-        position: relative;
-        justify-content: space-between;
-        height: 64px;
-    }
+  .detail {
+    width: 88%;
+    margin: 60px 6%;
+  }
 
-    .title {
-        padding: 0 20px;
-        font-size: 2.4rem;
-    }
+  .tr {
+    flex-direction: column;
+    padding: 8px 0;
+  }
 
-    .sp_menu {
-        display: block;
-        margin-right: 20px;
-    }
+  .th {
+    width: 100%;
+    padding: 0 13px;
+  }
 
-    .menu {
-        position: absolute;
-        top: 64px;
-        left: 0;
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        font-size: 1.8rem;
-    }
-
-    .menu_inner {
-        width: 100%;
-        min-height: 60px;
-        border-right: none;
-        border-bottom: 1px solid #ffffff;
-    }
-
-    .menu_item {
-        justify-content: flex-end;
-        min-height: 60px;
-        padding-right: 20px;
-    }
-
-    .detail {
-        width: 88%;
-        margin: 60px 6%;
-    }
-
-    .tr {
-        flex-direction: column;
-        padding: 8px 0;
-    }
-
-    .th {
-        width: 100%;
-        padding: 0 13px;
-    }
-
-    .td {
-        width: 100%;
-        padding: 0 13px;
-    }
+  .td {
+    width: 100%;
+    padding: 0 13px;
+  }
 }
+/*# sourceMappingURL=map/detail.css.map */

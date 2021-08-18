@@ -1,6 +1,8 @@
 @charset "utf-8";
-@import "foundation/**";
+@import "reset";
+@import "settings";
 @import "modules/**";
+@import "menu";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 
 html {
